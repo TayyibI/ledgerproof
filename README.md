@@ -10,9 +10,9 @@ here asks a model whether another model was right.
 Everything is measured on 500 held-out documents from the
 [DocILE benchmark](https://github.com/rossumai/docile): real invoices and orders with human labels.
 
-[![The one-minute film: one invoice through the pipeline, then 500](docs/film-preview.gif)](docs/ledgerproof-film.mp4)
+[![The one-minute film: one invoice through the pipeline, then 500. Click to watch on YouTube.](docs/film-preview.gif)](https://youtu.be/DdQvodrPBPE)
 
-**[Watch the full film with its timing, 56 s](docs/ledgerproof-film.mp4)** (it plays in GitHub's file viewer). The film is rendered from the run's own data files; the animation above is a silent preview.
+**[Watch the one-minute film on YouTube](https://youtu.be/DdQvodrPBPE)** (56 s; the animation above is a silent preview). The film is rendered from the run's own data files; the [mp4 is also in this repo](docs/ledgerproof-film.mp4).
 
 ![What each commit policy costs](docs/tradeoff.png)
 
@@ -225,8 +225,9 @@ python3 -m http.server 4173 --directory dist &   # dist/index.html: the site; di
 python3 scripts/render_film.py                    # renders the film frame by frame (Playwright + ffmpeg)
 ```
 
-The site shows the scanned DocILE page, so it stays private until the dataset's organisers confirm
-it can be shown. The film shows the values re-typeset, not the scan.
+The site shows the scanned DocILE page and the OCR trace, so those two files are gitignored and
+the site is not hosted publicly until the dataset's organisers confirm it can be shown. The film
+shows the values re-typeset, not the scan, and is the public version of the same story.
 
 ## Data
 
