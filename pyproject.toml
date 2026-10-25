@@ -1,0 +1,33 @@
+[project]
+name = "ledgerproof"
+version = "0.1.0"
+description = "Measure how much deterministic judges catch when a model extracts business documents."
+requires-python = ">=3.12"
+# The judges need only python-dateutil; scoring adds numpy and scipy (line alignment).
+dependencies = ["python-dateutil>=2.9", "numpy>=2.0", "scipy>=1.13"]
+
+[project.optional-dependencies]
+models = ["anthropic>=2.1"]
+report = ["matplotlib>=3.9", "pillow>=10"]
+dev = ["pytest>=8", "hypothesis>=6.100"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ledgerproof"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+# judges.py is frozen at tag judges-v2: style fixes there would change the frozen file.
+extend-exclude = ["src/ledgerproof/judges.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I"]
+ignore = ["E501", "E741", "B007", "B905"]

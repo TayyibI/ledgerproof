@@ -1,0 +1,26 @@
+# Never commit the DocILE access token or the dataset itself.
+.env
+data
+data/
+reports/*
+!reports/.gitkeep
+# Aggregates only (no document content): run summaries, injection summaries, coverage, audit categories.
+!reports/run_*_val.json
+!reports/injections_*_summary.json
+!reports/coverage_train.json
+!reports/audit_first_pass_*.json
+!reports/first_val_injection/
+!reports/v1_val_injection/
+__pycache__/
+.pytest_cache/
+.hypothesis/
+.venv/
+*.egg-info/
+cache/
+audit/
+site/node_modules/
+site/dist/
+# DocILE-derived page image and OCR trace: keep out of git until Rossum confirms
+site/public/data/*.webp
+site/public/data/trace.json
+site/dist-artifact/
