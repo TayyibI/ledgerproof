@@ -14,7 +14,8 @@ Everything is measured on 500 held-out documents from the
 
 **[Watch the one-minute film on YouTube](https://youtu.be/DdQvodrPBPE)** (56 s; the animation above is a silent preview). The film is rendered from the run's own data files; the [mp4 is also in this repo](docs/ledgerproof-film.mp4).
 
-![What each commit policy costs](docs/tradeoff.png)
+What each commit policy costs<img width="1280" height="736" alt="tradeoff" src="https://github.com/user-attachments/assets/a59bf23f-558c-4c7d-b98a-ce1e454766bb" />
+
 
 ## Result
 
